@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=HeadAdvisor
+comment0.text=\r\n\ HeadAdvisor\ class\ represents\ the\ academic\ department\ administrator.\r\n\ Extends\ the\ abstract\ Advisor\ class\ and\ implements\ all\ abstract\ methods.\r\n\r\n\ Head\ advisors\ have\ ALL\ standard\ permissions\ PLUS\ exclusive\ admin\ privileges\:\r\n\ \ \ Standard\ (inherited\ from\ Advisor)\:\r\n\ \ \ \ \ -\ Add\ courses\ to\ catalog\r\n\ \ \ \ \ -\ Process\ enrollment\ /\ drop\ transactions\r\n\ \ \ \ \ -\ View\ transaction\ history\r\n\ \ \ Admin\ only\:\r\n\ \ \ \ \ -\ Remove\ courses\ from\ catalog\r\n\ \ \ \ \ -\ Generate\ reports\ (student\ list,\ catalog,\ full\ system)\r\n\ \ \ \ \ -\ Approve\ prerequisite\ overrides\ for\ students\r\n\ \ \ \ \ -\ Manage\ staff\r\n\r\n\r\n\ @author\ Praise\ Chopde\r\n\ @studentID\ 3779552\r\n\ @course\ CS1083\r\n\ @version\ April\ 2026\r\n
+comment1.params=name\ id\ email\ phoneNumber\ employeeId\ shift
+comment1.target=HeadAdvisor(java.lang.String,\ int,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ HeadAdvisor.\r\n\ Three-level\ constructor\ chain\:\ HeadAdvisor\ ->\ Advisor\ ->\ Person.\r\n\r\n\r\n\ @param\ name\ \ \ \ \ \ \ \ The\ head\ advisor's\ full\ name\r\n\ @param\ id\ \ \ \ \ \ \ \ \ \ Unique\ person\ ID\r\n\ @param\ email\ \ \ \ \ \ \ Head\ advisor's\ email\ address\r\n\ @param\ phoneNumber\ Head\ advisor's\ phone\ number\r\n\ @param\ employeeId\ \ Employee\ identification\ number\r\n\ @param\ shift\ \ \ \ \ \ \ Work\ shift\ assignment\r\n
+comment2.params=
+comment2.target=boolean\ canRemoveCourses()
+comment2.text=\r\n\ POLYMORPHISM\ -\ Implementation\ of\ abstract\ method\ from\ Advisor.\r\n\ Head\ advisors\ DO\ have\ permission\ to\ remove\ courses\ from\ the\ catalog.\r\n\r\n\ Mirrors\ HeadLibrarian.canRemoveItems().\r\n\r\n\ @return\ true\ -\ head\ advisors\ can\ remove\ catalog\ items\r\n
+comment3.params=
+comment3.target=java.lang.String\ displayInfo()
+comment3.text=\r\n\ POLYMORPHISM\ -\ Implementation\ of\ abstract\ method\ from\ Person.\r\n\ Displays\ head\ advisor\ details\ with\ admin\ permission\ level.\r\n\r\n\ Mirrors\ HeadLibrarian.displayInfo().\r\n\r\n\ @return\ Formatted\ string\ with\ head\ advisor\ details\r\n
+comment4.params=
+comment4.target=java.lang.String\ getRole()
+comment4.text=\r\n\ POLYMORPHISM\ -\ Implementation\ of\ abstract\ method\ from\ Person.\r\n\ @return\ The\ role\ string\ for\ the\ head\ advisor\r\n
+comment5.params=catalog\ course
+comment5.target=boolean\ removeCourse(java.util.ArrayList,\ Course)
+comment5.text=\r\n\ ADMIN\ PRIVILEGE\ -\ Removes\ a\ specific\ course\ from\ the\ academic\ catalog.\r\n\ Only\ head\ advisors\ may\ perform\ this\ action\ (canRemoveCourses()\ \=\=\ true).\r\n\r\n\ Mirrors\ HeadLibrarian.removeBook(ArrayList<Book>,\ Book).\r\n\r\n\ @param\ catalog\ \ The\ department's\ master\ course\ ArrayList\r\n\ @param\ course\ \ \ The\ Course\ to\ remove\r\n\ @return\ true\ if\ the\ course\ was\ found\ and\ removed,\ false\ otherwise\r\n
+comment6.params=reportType\ students\ catalog
+comment6.target=java.lang.String\ generateReport(java.lang.String,\ java.util.ArrayList,\ java.util.ArrayList)
+comment6.text=\r\n\ ADMIN\ PRIVILEGE\ -\ Generates\ a\ formatted\ report\ string.\r\n\ Accepts\ the\ live\ student\ and\ course\ lists\ so\ the\ report\ contains\ real\ data.\r\n\r\n\ Three\ report\ types\ supported\:\r\n\ \ \ "Students"\ -\ all\ registered\ students\ and\ their\ enrollment\ status\r\n\ \ \ "Catalog"\ \ -\ all\ courses\ and\ their\ availability\r\n\ \ \ "Full"\ \ \ \ \ -\ both\ of\ the\ above\ combined\r\n\r\n\ Mirrors\ HeadLibrarian.generateReport(String,\ ArrayList<Member>,\ ArrayList<Book>).\r\n\r\n\ @param\ reportType\ \ "Students",\ "Catalog",\ or\ "Full"\r\n\ @param\ students\ \ \ \ The\ live\ ArrayList\ of\ Student\ objects\r\n\ @param\ catalog\ \ \ \ \ The\ live\ ArrayList\ of\ Course\ objects\r\n\ @return\ \ \ \ \ \ \ \ \ \ \ \ The\ full\ formatted\ report\ as\ a\ String\r\n
+comment7.params=student\ course
+comment7.target=java.lang.String\ approvePrereqOverride(Student,\ Course)
+comment7.text=\r\n\ ADMIN\ PRIVILEGE\ -\ Approves\ a\ prerequisite\ override\ for\ a\ student.\r\n\ Allows\ a\ student\ to\ enroll\ in\ a\ course\ even\ if\ they\ are\ missing\ a\r\n\ prerequisite,\ as\ a\ special\ exception\ granted\ by\ the\ head\ advisor.\r\n\r\n\ This\ is\ the\ conceptual\ replacement\ for\ HeadLibrarian.approveFineWaiver()\:\r\n\ \ \ Fine\ waiver\ \ \ \=\ removing\ a\ financial\ block\r\n\ \ \ Prereq\ override\ \=\ removing\ an\ academic\ block\r\n\ Same\ pattern,\ different\ domain.\r\n\r\n\ @param\ student\ \ \ \ \ The\ student\ requesting\ the\ override\r\n\ @param\ course\ \ \ \ \ \ The\ course\ the\ student\ wants\ to\ enroll\ in\ despite\ missing\ prereqs\r\n\ @return\ A\ status\ message\ describing\ the\ outcome\r\n
+comment8.params=action
+comment8.target=void\ manageStaff(java.lang.String)
+comment8.text=\r\n\ ADMIN\ PRIVILEGE\ -\ Logs\ a\ staff\ management\ action.\r\n\r\n\ Mirrors\ HeadLibrarian.manageStaff(String).\r\n\r\n\ @param\ action\ \ Description\ of\ the\ management\ action\ performed\r\n
+numComments=9

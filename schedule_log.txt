@@ -1,0 +1,26 @@
+System started. 9 UNB CS courses pre-loaded into catalog.
+----------------------------------------
+NEW STUDENT
+=== STUDENT REGISTERED ===
+
+Student:  Praise Chopde
+	ID:       3779552
+	Program:  BCS
+	Email:    p@unb.ca
+	Phone:    123344567
+	GPA:      0.00
+	Status:   In Good Standing
+	Credits Completed: 0 cr
+	Current Load:      0 cr
+	Enrolled Courses (0/6):
+	  (none)
+	Completed Courses (0):
+	  (none)
+
+Role: Student — BCS
+Total students registered: 1
+----------------------------------------
+System started. 9 UNB CS courses pre-loaded into catalog.
+----------------------------------------
+System started. 9 UNB CS courses pre-loaded into catalog.
+----------------------------------------
